@@ -1,0 +1,69 @@
+<html>
+<head>
+	<title> JQuery Test  </title>
+   <style>
+      #bdy{
+         background-color: palegreen;
+         position: relative;
+         border: 1px solid black;
+      }
+   </style>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script type = "text/javascript">
+
+		    // ready func call when document is ready to render
+         $(document).ready(function() 
+         {     
+               // Siblings()
+               $('#btnSiblings').click(function(){
+                  $('#divB').siblings().css('color','red');
+               });
+               // Next()
+               $('#btnNext').click(function(){
+                  $('#divC h3').next().css('color','Blue');
+               });
+                // NextAll()
+                $('#btnNextAll').click(function(){
+                  $('#divC h3').nextAll().css('color','orange');
+               });
+                // NextUntill()
+                $('#btnNextUntill').click(function(){
+                  $('#divC h3').nextUntil('.classh3').css('color','orange');
+               });
+               // Prev()
+               $('#btnPrev').click(function(){
+                  $('#divC h3').prev().css('color','yellow');
+               });
+                // PrevAll()
+                $('#btnPrevAll').click(function(){
+                  $('#divC h3').prevAll().css('color','purple');
+               });
+                // PrevUntill()
+                $('#btnPrevUntill').click(function(){
+                  $('#divD h3').prevUntil('.classh3').css('color','pink');
+               });
+         });
+     </script>
+<head>
+   <body>
+   <div id="divA" style="background-color: palegreen;">
+      <h3> Div A1</h3> <h3> Div A2</h3>
+      <div id="divB" style="background-color: rgb(126, 149, 192); position: relative;">
+         <h3> Div B1</h3> <h3> Div B2</h3>
+         <div id="divC" class="divCclass" style="background-color: rgb(206, 191, 126);">
+            <h3> Div C1</h3> <h3 class="classh3"> Div C2</h3>
+            <div id="divD" style="background-color: rgb(145, 207, 145);">
+               <h3> Div D1</h3> <h3> Div D2</h3>
+            </div>
+         </div>
+      </div>
+   </div>
+   <button id="btnSiblings"> Siblings </button> 
+   <button id="btnNext"> Next </button> 
+   <button id="btnNextAll"> Next All </button> 
+   <button id="btnNextUntill"> Next Untill </button> 
+   <button id="btnPrev"> Prev </button> 
+   <button id="btnPrevAll"> Prev All </button> 
+   <button id="btnPrevUntill"> Prev Untill </button> 
+</body>
+</html>
